@@ -1,0 +1,10 @@
+streamlit
+groq
+chromadb
+langchain-chroma
+langchain-huggingface
+langchain-community
+sentence-transformers
+rank-bm25
+torch
+pandas

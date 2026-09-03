@@ -1,0 +1,41 @@
+MALAYSIA ICH RAG CHAT — BEGINNER CHECKLIST
+===========================================
+
+Your goal is only to make this folder complete first.
+
+STEP 1 — ADD THE FINAL CHUNKS
+Open the data folder.
+Delete PUT_recursive_chunks.csv_HERE.txt.
+Copy your final recursive_chunks.csv into the data folder.
+
+You should have:
+data/recursive_chunks.csv
+
+STEP 2 — ADD THE FINAL CHROMA DATABASE
+Open vector_db/stage4_safe.
+Delete PUT_FINAL_CHROMA_FILES_HERE.txt.
+Copy EVERYTHING from your real final stage4_safe folder into this folder.
+
+You should see chroma.sqlite3 plus the other Chroma files/folders.
+
+STEP 3 — DO NOT PUT YOUR API KEY IN THE PYTHON FILE
+Your Groq API key must go into Streamlit Secrets when you deploy.
+
+STEP 4 — GITHUB
+Create a GitHub repository such as malaysia-ich-rag-chat.
+Upload this whole folder structure.
+Never upload .streamlit/secrets.toml if you create it locally.
+
+STEP 5 — STREAMLIT CLOUD
+Go to Streamlit Community Cloud.
+Create app -> choose your GitHub repository.
+Branch: main
+Main file: streamlit_app.py
+
+In Streamlit Secrets add:
+GROQ_API_KEY = "YOUR_REAL_GROQ_API_KEY"
+
+Then Deploy.
+
+IMPORTANT
+This is a research prototype, not a clinically validated medical tool.
