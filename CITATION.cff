@@ -1,0 +1,5 @@
+cff-version: 1.2.0
+message: "If you use this research prototype, please cite the associated MSc Data Science report when its final bibliographic details are available."
+title: "Clinical ICH Guideline RAG"
+type: software
+date-released: "2026-10-29"

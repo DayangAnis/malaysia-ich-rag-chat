@@ -1,0 +1,78 @@
+{
+  "project": "Clinical ICH Guideline RAG",
+  "source_description": "Malaysia Clinical Practice Guideline on Management of Spontaneous Intracerebral Haemorrhage (2025)",
+  "evaluation": {
+    "questions": 29,
+    "responses": 58,
+    "evaluator_count": 1,
+    "rubric_max_score": 7,
+    "rag_mean_total_score": 5.552,
+    "baseline_mean_total_score": 1.414,
+    "rag_sd_total_score": 2.354,
+    "baseline_sd_total_score": 1.991,
+    "questions_where_rag_scored_higher": 24,
+    "unsupported_claims": {
+      "Baseline": {
+        "count": 28,
+        "total": 29,
+        "percentage": 96.6
+      },
+      "RAG": {
+        "count": 4,
+        "total": 29,
+        "percentage": 13.8
+      }
+    },
+    "wilcoxon_tests": [
+      {
+        "outcome": "faithfulness_0_2",
+        "n_pairs": 29,
+        "rag_median": 2.0,
+        "baseline_median": 0.0,
+        "p_formatted": "<0.001"
+      },
+      {
+        "outcome": "clinical_correctness_0_2",
+        "n_pairs": 29,
+        "rag_median": 2.0,
+        "baseline_median": 0.0,
+        "p_formatted": "<0.001"
+      },
+      {
+        "outcome": "completeness_0_2",
+        "n_pairs": 29,
+        "rag_median": 1.0,
+        "baseline_median": 0.0,
+        "p_formatted": "<0.001"
+      },
+      {
+        "outcome": "conciseness_0_1",
+        "n_pairs": 29,
+        "rag_median": 1.0,
+        "baseline_median": 0.0,
+        "p_formatted": "<0.001"
+      },
+      {
+        "outcome": "total_score_0_7",
+        "n_pairs": 29,
+        "rag_median": 6.0,
+        "baseline_median": 0.0,
+        "p_formatted": "<0.001"
+      }
+    ]
+  },
+  "retrieval": {
+    "chunking": "recursive",
+    "embedding_model": "FremyCompany/BioLORD-2023-C",
+    "retrieval_method": "hybrid",
+    "top_k": 5,
+    "rrf_constant": 60,
+    "experiment_log_recall_at_5": 0.606896552,
+    "experiment_log_mrr_at_5": 0.868,
+    "report_abstract_recall_at_5": 0.6,
+    "report_abstract_mrr_at_5": 0.833,
+    "note": "The experiment log and report abstract contain different aggregate retrieval metrics; reconcile before publication."
+  },
+  "generator": "openai/gpt-oss-120b",
+  "safety_note": "Research prototype only; not clinically validated and not for medical decision-making."
+}

@@ -1,0 +1,5 @@
+metric,condition,value
+Mean answer quality (0-7),RAG,5.552
+Mean answer quality (0-7),Non-RAG baseline,1.414
+Responses with unsupported claims (%),RAG,13.8
+Responses with unsupported claims (%),Non-RAG baseline,96.6
